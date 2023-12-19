@@ -1,0 +1,56 @@
+.form-filter__list input {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $dark-grey-text-color;
+}
+
+.form-filter__item {
+  list-style-type: none;
+}
+
+.form__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black-text-color;
+}
+
+.form-filter__filter-title {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black-text-color;
+}
+
+.form-filter__control {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $dark-grey-text-color;
+}
+
+.form-filter__filter-subtitle {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black-text-color;
+}
+
+.form-filter__text-about {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $dark-grey-text-color;
+}
+
+.form-filter__form-required {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black-text-color;
+}

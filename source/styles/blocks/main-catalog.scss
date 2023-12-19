@@ -1,0 +1,25 @@
+.main-catalog__item {
+  list-style-type: none;
+}
+
+.main-catalog__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  color: $black-text-color;
+}
+
+.main-catalog__title-name {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $base-text-color;
+}
+
+.main-catalog__subtitle {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-grey-text-color;
+}
