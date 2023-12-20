@@ -1,0 +1,20 @@
+.main-container__main {
+  background-image: url("../../images/index-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: center;
+  background-color: $bg-basic_green;
+}
+
+.main-container__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  color: $white-text-color;
+}
+
+.main-container__subtitle {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white-text-color;
+}

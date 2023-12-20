@@ -1,0 +1,25 @@
+.more-products__item {
+  list-style-type: none;
+}
+
+.more-products__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black-text-color;
+}
+
+.more-products___title-name {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $base-text-color;
+}
+
+.more-products__subtitle {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark-grey-text-color;
+}
