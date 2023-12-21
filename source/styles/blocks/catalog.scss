@@ -2,8 +2,22 @@
   background-color: $bg-grey-color;
 }
 
+.catalog__wrapper--cat-slim {
+  background-image: url("../../images/icons/cat-slim.svg#cat-slim");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 36px;
+}
+
+.catalog__wrapper--cat-pro {
+  background-image: url("../../images/icons/cat-pro.svg#cat-pro");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 67px;
+}
+
 .catalog__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $secondary-font;
   font-size: 24px;
   line-height: 37px;
   color: $black-text-color;
@@ -11,15 +25,19 @@
 }
 
 .catalog__subtitle {
-  font-family: "Lato", sans-serif;
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
 }
 
 .catalog__link {
-  font-family: "Oswald", sans-serif;
+  font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   color: $black-text-color;
+  background-image: url("../../images/icons/arrow.svg#arrow");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 24px;
 }

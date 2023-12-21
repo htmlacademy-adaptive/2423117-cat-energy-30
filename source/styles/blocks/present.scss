@@ -1,5 +1,10 @@
 .present {
   background-color: $bg-basic_green;
+  background-image: url("../../images/icons/catalog-present.svg#catalog-present");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 78px 80px;
+  width: 280px;
 }
 
 .present__subtitle {
@@ -7,4 +12,5 @@
   font-size: 16px;
   line-height: 20px;
   color: $white-text-color;
+  padding: 186px 61px 43px 58px;
 }
