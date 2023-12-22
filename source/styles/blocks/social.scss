@@ -1,3 +1,21 @@
 .social__item {
   list-style-type: none;
 }
+
+.social__link--vk {
+  mask-image: url("../../images/icons/stack.svg#vkontakte");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+}
+
+.social__link--youtube {
+  mask-image: url("../../images/icons/stack.svg#youtube");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+}
+
+.social__link--telegram {
+  mask-image: url("../../images/icons/stack.svg#telegram");
+  mask-repeat: no-repeat;
+  mask-size: 28px 22px;
+}
