@@ -12,3 +12,35 @@
   color: $dark-grey-text-color;
   list-style-type: none;
 }
+
+.adventages__item--healthy {
+  background-image: url("../../images/icons/icon_leaf.svg#icon_leaf");
+  background-color: #cccccc;//временный цвет
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25px 28px;
+}
+
+.adventages__item--view {
+  background-image: url("../../images/icons/icon_water.svg#icon_water");
+  background-color: #cccccc;//временный цвет
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 26px 28px;
+}
+
+.adventages__item--replace {
+  background-image: url("../../images/icons/icon_eat.svg#icon_eat");
+  background-color: #cccccc;//временный цвет
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 25px 30px;
+}
+
+.adventages__item--changes {
+  background-image: url("../../images/icons/icon_watch.svg#icon_watch");
+  background-color: #cccccc;//временный цвет
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 26px 31px;
+}
