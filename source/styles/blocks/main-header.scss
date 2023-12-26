@@ -1,9 +1,33 @@
+.main-header {
+  padding-top: 13px;
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+}
+
 .main-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.main-header__logo-text {
+  padding-left: 56px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    padding-top: 25px;
+    height: 140px;
   }
 }

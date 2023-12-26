@@ -1,3 +1,7 @@
+.catalog {
+  margin-top: 20px;
+}
+
 .catalog__wrapper {
   background-color: $bg-grey-color;
 }
@@ -22,6 +26,7 @@
   line-height: 37px;
   color: $black-text-color;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog__subtitle {
@@ -29,15 +34,31 @@
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
+  margin: 0;
 }
 
 .catalog__link {
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   color: $black-text-color;
   background-image: url("../../images/icons/arrow.svg#arrow");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    gap: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }

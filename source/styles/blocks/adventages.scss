@@ -1,3 +1,19 @@
+.adventages__list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 154px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 230px);
+    gap: 80px;
+  }
+}
+
 .adventages__title {
   font-family: $secondary-font;
   font-size: 36px;

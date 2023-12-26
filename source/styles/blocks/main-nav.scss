@@ -1,7 +1,46 @@
+.main-nav__wrapper {
+  display: none;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav__item {
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 20px;
   color: $black-text-color;
   list-style-type: none;
+}
+
+.main-nav__toggle {
+  display: block;
+  background-image: url("../../images/icons/open-button-mobile.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+  border: none;
+  background-color: $white-color;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
 }

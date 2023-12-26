@@ -6,6 +6,13 @@
   color: $dark-grey-text-color;
 }
 
+.form-filter__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form-filter__item {
   list-style-type: none;
 }
