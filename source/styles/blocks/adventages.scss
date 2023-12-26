@@ -1,17 +1,10 @@
 .adventages__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  margin-top: 40px;
   padding: 0;
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 37px 154px;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 230px);
-    gap: 80px;
-  }
+  list-style-type: none;
 }
 
 .adventages__title {
@@ -19,44 +12,78 @@
   font-size: 36px;
   line-height: 40px;
   color: $black-text-color;
+  margin: 0;
+  margin-top: $margin-top-mobile;
 }
 
-.adventages__item {
+.adventages__subtitle {
   font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
-  list-style-type: none;
+  margin: 0;
+  margin-left: 80px;
 }
 
-.adventages__item--healthy {
+.adventages__item--healthy::before {
+  content: "";
+  display: block;
   background-image: url("../../images/icons/icon_leaf.svg#icon_leaf");
-  background-color: #cccccc;//временный цвет
+  background-color: $bg-basic_green;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-size: 25px 28px;
+  width: 60px;
+  height: 60px;
 }
 
-.adventages__item--view {
+.adventages__item--view::before {
+  content: "";
+  display: block;
   background-image: url("../../images/icons/icon_water.svg#icon_water");
-  background-color: #cccccc;//временный цвет
+  background-color: $bg-basic_green;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-size: 26px 28px;
+  width: 60px;
+  height: 60px;
 }
 
-.adventages__item--replace {
+.adventages__item--replace::before {
+  content: "";
+  display: block;
   background-image: url("../../images/icons/icon_eat.svg#icon_eat");
-  background-color: #cccccc;//временный цвет
+  background-color: $bg-basic_green;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-size: 25px 30px;
+  width: 60px;
+  height: 60px;
 }
 
-.adventages__item--changes {
+.adventages__item--changes::before {
+  content: "";
+  display: block;
   background-image: url("../../images/icons/icon_watch.svg#icon_watch");
-  background-color: #cccccc;//временный цвет
+  background-color: $bg-basic_green;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-size: 26px 31px;
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: $tablet-width) {
+  .adventages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 154px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adventages__list {
+    grid-template-columns: repeat(4, 230px);
+    gap: 80px;
+  }
 }
