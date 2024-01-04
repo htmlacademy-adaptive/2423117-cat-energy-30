@@ -2,9 +2,29 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 40px;
+  margin-top: $margin-top-mobile;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 154px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 230px);
+    gap: 80px;
+  }
+}
+
+.adventages__item {
+  display: flex;
+  margin-top: $margin-top-mobile;
+
+  &:last-child {
+    margin-bottom: 49px;
+  }
 }
 
 .adventages__title {
@@ -14,15 +34,25 @@
   color: $black-text-color;
   margin: 0;
   margin-top: $margin-top-mobile;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 45px;
+  }
 }
 
 .adventages__subtitle {
-  font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
   margin: 0;
-  margin-left: 80px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .adventages__item--healthy::before {
@@ -35,6 +65,7 @@
   background-size: 25px 28px;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 }
 
 .adventages__item--view::before {
@@ -47,6 +78,7 @@
   background-size: 26px 28px;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 }
 
 .adventages__item--replace::before {
@@ -59,6 +91,7 @@
   background-size: 25px 30px;
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
 }
 
 .adventages__item--changes::before {
@@ -71,19 +104,5 @@
   background-size: 26px 31px;
   width: 60px;
   height: 60px;
-}
-
-@media (min-width: $tablet-width) {
-  .adventages__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 37px 154px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .adventages__list {
-    grid-template-columns: repeat(4, 230px);
-    gap: 80px;
-  }
+  flex-shrink: 0;
 }

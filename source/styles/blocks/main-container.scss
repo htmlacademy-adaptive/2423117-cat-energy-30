@@ -1,7 +1,7 @@
 .main-container__main {
   background-image: url("../../images/index-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 320px 302px;
+  background-size: cover;
   text-align: center;
   margin-top: 14px;
 }
@@ -31,7 +31,33 @@
 
 @media (min-width: $tablet-width) {
   .main-container__main {
+    position: relative;
     background: none;
+  }
+
+  .main-container__title {
+    color: $black-text-color;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: start;
+    width: 510px;
+    padding-left: 60px;
+  }
+
+  .main-container__subtitle {
+    color: $black-text-color;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    padding-left: 60px;
+    margin-top: 40px;
+  }
+
+  .main-container__button {
+    position: absolute;
+    top: 260px;
+    left: 90px;
+    max-width: 244px;
   }
 }
 

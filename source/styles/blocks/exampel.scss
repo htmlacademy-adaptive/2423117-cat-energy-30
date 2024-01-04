@@ -1,5 +1,6 @@
 .exampel__wrapper {
   background-color: #eaeaea;
+  padding-bottom: 40px;
 }
 
 .exampel__title {
@@ -7,6 +8,14 @@
   font-size: 36px;
   line-height: 40px;
   color: $black-text-color;
+  margin: 0;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 45px;
+  }
 }
 
 .exampel__subtitle {
@@ -14,6 +23,31 @@
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
+  margin: 0;
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 60px;
+  }
+}
+
+.exampel__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 0;
+  margin-top: $margin-top-mobile;
+
+  @media (min-width: $tablet-width) {
+    width: 367px;
+    gap: 43px;
+  }
+}
+
+.exampel__item {
+  text-align: center;
 }
 
 .exampel__number {
@@ -21,19 +55,35 @@
   font-size: 24px;
   line-height: 24px;
   color: $black-text-color;
+  padding-top: 14px;
+  border-collapse: collapse;
 }
 
 .exampel__description {
-  font-family: $primary-font;
   font-size: 12px;
   line-height: 12px;
   color: $dark-grey-text-color;
+  margin: 0;
+  margin-top: 8px;
 }
 
 .exampel__subtitle-price {
   font-family: $secondary-font;
   font-size: 14px;
-  line-height: 20px;
   text-transform: uppercase;
   color: $black-text-color;
+  margin: 0;
+  margin-top: $margin-top-mobile;
+  text-align: center;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin: 0;
+    text-align: end;
+  }
+}
+
+.cat-before {
+  margin-top: $margin-top-mobile;
 }

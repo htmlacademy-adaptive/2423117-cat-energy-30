@@ -15,9 +15,9 @@
   &:hover {
     background-color: $bg-green-hover;
   }
-  //  как сделать только чтобы менялся цвет текста?
+
   &:active {
-    opacity: 0.3;
+    color: fade($white-color, 30%);
   }
 }
 

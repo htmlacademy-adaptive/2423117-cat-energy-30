@@ -5,6 +5,7 @@
 .main-header__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-header__logo {
@@ -22,12 +23,19 @@
 }
 
 .main-header__logo-text {
-  padding-left: 56px;
+  display: block;
+  margin-left: 56px;
 }
 
 @media (min-width: $tablet-width) {
   .main-header {
-    padding-top: 25px;
+    display: flex;
+    align-items: center;
     height: 140px;
+    padding: 0;
+  }
+
+  .main-header__logo-text {
+    margin-left: 13px;
   }
 }
