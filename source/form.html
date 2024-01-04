@@ -210,7 +210,7 @@
               class="form-filter__control-input-name"
               name="story"
               rows="5"
-              cols="20"
+              cols="50"
               autocomplete="off"
             >
 Расскажите обо всех повадках кота</textarea
@@ -259,74 +259,61 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__contacts contacts">
-          <b class="contacts__title">приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
+        <div class="container">
+          <div class="main-footer__contacts contacts">
+            <b class="contacts__title">приглашаем к сотрудничеству дилеров!</b>
+            <p class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            </p>
+          </div>
+        </div>
+        <div class="main-footer__map">
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A28d8ea60307900d8486bb0e558a27e6061239ac830d9fef176acfac6ae484a38&amp;source=constructor"
-            width="320"
+            width="100%"
             height="665"
           ></iframe>
         </div>
-        <div class="main-footer__logo">
-          <a class="main-footer__logo-text" href="#">
-            <img
-              class="main-footer__logo-image"
-              src="images/logo-text.svg"
-              width="128"
-              height="24"
-              alt="Текстовый логотип компании"
-            />
-          </a>
-        </div>
-        <div class="main-footer__social social">
-          <b class="visualy-hidden">Давайте дружить</b>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link" href="#">
+        <div class="container">
+          <div class="main-footer__container">
+            <div class="main-footer__logo">
+              <a class="main-footer__logo-text" href="#">
                 <img
-                  src="images/vkontakte.svg"
-                  width="28"
-                  height="22"
-                  alt="Социальная сеть ВКонтакте"
+                  class="main-footer__logo-image"
+                  src="images/logo-text.svg"
+                  width="128"
+                  height="24"
+                  alt="Текстовый логотип компании"
                 />
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
+            </div>
+            <div class="main-footer__social social">
+              <b class="visualy-hidden">Давайте дружить</b>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link social__link--vk" href="#"> </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--youtube" href="#"> </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link social__link--telegram" href="#"> </a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-footer__copyright copyright">
+              <a class="copyright__link" href="#">
+                <b class="copyright__text">HTML Academy</b>
                 <img
-                  src="images/youtube.svg"
-                  width="28"
-                  height="22"
-                  alt="Социальная сеть Ютуб"
+                  class="copyright__link-image"
+                  src="images/logo-html-academy.svg"
+                  width="27"
+                  height="34"
+                  alt="Картинка логотипа HTML  Academy"
                 />
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <img
-                  src="images/telegram.svg"
-                  width="28"
-                  height="22"
-                  alt="Социальная сеть Телеграмм"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__copyright copyright">
-          <a class="copyright__link" href="#">
-            <b class="copyright__text">HTML Academy</b>
-            <img
-              class="copyright__link-image"
-              src="images/logo-html-academy.svg"
-              width="27"
-              height="34"
-              alt="Картинка логотипа HTML  Academy"
-            />
-          </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

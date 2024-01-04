@@ -1,9 +1,41 @@
+.main-header {
+  padding-top: 13px;
+}
+
+.main-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.main-header__logo-text {
+  display: block;
+  margin-left: 56px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    display: flex;
+    align-items: center;
+    height: 140px;
+    padding: 0;
+  }
+
+  .main-header__logo-text {
+    margin-left: 13px;
   }
 }
