@@ -1,13 +1,105 @@
-.form-filter__control-input-name {
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $dark-grey-text-color;
+.form {
+  overflow: hidden;
+}
+
+.form__name {
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-top: 66px;
+  }
+}
+
+.form-filter__filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-filter__filter-group--name {
+  position: relative;
+  padding-bottom: 24px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $line-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.form-filter__filter-group--goals {
+  position: relative;
+  padding-bottom: 25px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $line-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $border-color;
+    padding: 35px 27px;
+    margin-top: 72px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.form-filter__list {
+  margin: 0;
+  padding: 0;
+}
+
+.form-filter__list-name {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .form-filter__item {
   list-style-type: none;
+
+  &:not(:first-child) {
+    margin-top: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .form__title {
@@ -15,6 +107,19 @@
   font-size: 36px;
   line-height: 36px;
   color: $black-text-color;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .form-filter__filter-title {
@@ -23,6 +128,16 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $black-text-color;
+  margin: 0;
+  padding: 0;
+  margin-top: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 330px;
+    margin-top: 54px;
+  }
 }
 
 .form-filter__control {
@@ -31,6 +146,148 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $dark-grey-text-color;
+  display: block;
+  position: relative;
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
+.form-filter__control-input-name {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $dark-grey-text-color;
+  padding: 14px 15px;
+  border: 1px solid $border-color;
+  margin-left: 13px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding: 11px 20px;
+  }
+}
+
+.form-filter__control-input-radio {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form-filter__control-lable {
+  margin-left: 45px;
+}
+
+.form-filter__control-mark--radio {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-filter__control-input-radio:checked .form-filter__control-mark {
+  &::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: $bg-basic_green;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+.form-filter__filter-group--contacts {
+  margin-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+}
+
+.form-filter__list-contacts {
+  margin-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 76px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+}
+
+.form-filter__filter-group--comments {
+  margin-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+}
+
+.form-filter__control-input-name--story {
+  width: 100%;
+  margin: 0;
+  margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 87px;
+  }
+}
+
+.form-filter__filter-group--more {
+  margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+}
+
+.form-filter__control-input-checkbox {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form-filter__control-mark--checkbox {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border: 1px solid #cdcdcd;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-filter__control-more {
+  margin-left: 41px;
+}
+
+.form-filter__list--more {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px 123px;
+    margin-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .form-filter__filter-subtitle {
@@ -38,11 +295,67 @@
   font-size: 24px;
   line-height: 26px;
   color: $black-text-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: calc(100% + 20px);
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $bg-basic_green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: calc(100% + 20px);
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $bg-basic_green;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__button {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 284px 1fr;
+    align-items: center;
+    margin-top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 570px 1fr;
+    margin-top: 65px;
+  }
+}
+
+.form-filter__button {
+  margin-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .form-filter__form-required {
-  font-family: $primary-font;
   font-size: 14px;
   line-height: 16px;
   color: $black-text-color;
+  display: block;
+  margin-top: 21px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

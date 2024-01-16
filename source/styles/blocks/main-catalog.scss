@@ -1,12 +1,64 @@
+.main-catalog__list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .main-catalog__item {
+  padding: 20px 0 25px;
   list-style-type: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $line-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $border-color;
+    background-color: $bg-grey-color;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .main-catalog__item--more {
   background-image: url("../../images/icons/catalog-plus.svg#catalog-plus");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center 25px;
   background-size: 30px 30px;
+  background-color: $white-color;
+  padding: 78px 0 25px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $line-color;
+  }
 }
 
 .main-catalog__title {
@@ -14,19 +66,47 @@
   font-size: 36px;
   line-height: 36px;
   color: $black-text-color;
+  margin: 0;
+  margin-top: 27px;
+  position: relative;
+  padding-bottom: 41px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $line-color;
+  }
 }
 
 .main-catalog__title-name {
   font-family: $secondary-font;
   font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
   color: $base-text-color;
+  margin: 0;
 }
 
 .main-catalog__subtitle {
-  font-family: $primary-font;
   font-size: 12px;
   line-height: 16px;
   color: $dark-grey-text-color;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.main-catalog__grid {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 80px;
+  }
+}
+
+.main-catalog__button {
+  margin-top: 21px;
 }

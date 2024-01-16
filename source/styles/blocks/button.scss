@@ -3,13 +3,29 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  color: $white-text-color;
+  color: $white-color;
   background-color: $bg-basic_green;
   text-decoration: none;
   border: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 44px;
+  text-align: center;
+
+  &:hover {
+    background-color: $bg-green-hover;
+  }
+  //  как сделать только чтобы менялся цвет текста?
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .button--secondary {
   background-color: $bg-grey-color;
   color: $dark-grey-text-color;
+
+  &:hover {
+    background-color: $bg-grey-hover;
+  }
 }

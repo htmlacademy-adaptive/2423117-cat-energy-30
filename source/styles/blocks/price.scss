@@ -1,6 +1,13 @@
+.price {
+  width: 140px;
+  text-align: end;
+}
+
 .price__title {
-  font-family: $primary-font;
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   line-height: 16px;
   color: $dark-grey-text-color;
+  margin: 0;
 }
