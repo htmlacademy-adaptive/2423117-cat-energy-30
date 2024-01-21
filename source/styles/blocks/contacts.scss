@@ -1,9 +1,9 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  background-color: $bg-grey-color;
   padding-top: 26px;
   padding-bottom: 26px;
+  background-color: $bg-grey-color;
 
   @media (min-width: $tablet-width) {
     padding: 60px 40px;
@@ -15,6 +15,10 @@
     position: absolute;
     top: 95px;
   }
+}
+
+.contacts__color {
+  background-color: $white-color;
 }
 
 .contacts iframe {
@@ -34,6 +38,7 @@
   font-size: 16px;
   text-transform: uppercase;
   color: #111111;
+  width: 165px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -46,10 +51,25 @@
   font-size: 14px;
   color: $dark-grey-text-color;
   margin: 0;
+  width: 160px;
 
   @media (min-width: $tablet-width) {
     width: 157px;
     font-size: 16px;
     text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.contacts__address span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }

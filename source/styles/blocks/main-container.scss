@@ -1,20 +1,68 @@
 .main-container__main {
-  background-image: url("../../images/index-background-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
-  background-position: top center;
+  position: relative;
   text-align: center;
+
+  &::after {
+    content: "";
+    background-image: url("../../images/index-background-mobile.jpg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 320px;
+    height: 302px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: -2;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: $bg-basic_green;
+    width: 100%;
+    height: 302px;
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
     background: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../images/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 720px 694px;
-    background-position: top right;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../../images/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      width: 50vw 100%;
+      height: 694px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: $bg-basic_green;
+      opacity: 0.85;
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      right: 0;
+      top: -224px;
+    }
   }
 }
 
@@ -23,6 +71,9 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    position: absolute;
+    top: -81px;
+    left: 557px;
   }
 }
 
@@ -40,11 +91,13 @@
     line-height: 60px;
     text-align: start;
     width: 510px;
-    padding-left: 60px;
+    margin-left: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
+    margin-left: 80px;
+    margin-top: 110px;
+    padding: 0;
   }
 }
 
@@ -62,12 +115,12 @@
     font-size: 20px;
     line-height: 20px;
     text-align: start;
-    padding-left: 60px;
+    margin-left: 60px;
     margin-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 80px;
+    margin-left: 80px;
   }
 }
 
@@ -76,15 +129,19 @@
 }
 
 .main-container__button {
+  margin: 0 20px;
+
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 260px;
+    top: 250px;
     left: 90px;
     max-width: 244px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     left: 190px;
+    top: 52px;
   }
 }
 

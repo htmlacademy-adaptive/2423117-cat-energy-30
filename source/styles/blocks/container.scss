@@ -9,10 +9,21 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
+    position: relative;
   }
 }
 
 .main-header__container {
   display: flex;
   justify-content: space-between;
+}
+
+.main-form__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }

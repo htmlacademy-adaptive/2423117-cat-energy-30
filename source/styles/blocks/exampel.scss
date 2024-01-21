@@ -1,6 +1,18 @@
 .exampel__wrapper {
   background-color: #eaeaea;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 101px;
+  }
+}
+
+.exampel__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 227px;
+  }
 }
 
 .exampel__title {
@@ -31,6 +43,25 @@
     line-height: 24px;
     margin-top: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    margin-top: 146px;
+  }
+}
+
+.exampel__result {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .exampel__list {
@@ -43,6 +74,7 @@
   @media (min-width: $tablet-width) {
     width: 367px;
     gap: 43px;
+    margin: 0;
   }
 }
 
@@ -57,6 +89,11 @@
   color: $black-text-color;
   padding-top: 14px;
   border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .exampel__description {
@@ -65,6 +102,11 @@
   color: $dark-grey-text-color;
   margin: 0;
   margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .exampel__subtitle-price {
@@ -80,6 +122,17 @@
     font-size: 20px;
     margin: 0;
     text-align: end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 55px;
+    flex-direction: row;
+
+    & span {
+      margin-left: 63px;
+    }
   }
 }
 
@@ -87,9 +140,78 @@
   margin-top: $margin-top-mobile;
 }
 
-// не работает...
-// .exampel__image--cat-before {
-//   width: 140px;
-//   height: 256px;
-//   overflow: hidden;
-// }
+.exampel__image {
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    margin-top: 99px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
+}
+
+.exampel__image-cat {
+  max-width: 100%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    display: block;
+    width: 280px;
+    height: 256px;
+    max-width: initial;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &--after {
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    img {
+      width: 560px;
+      height: 512px;
+    }
+  }
+}
+
+.exampel__slider {
+  width: 4px;
+  height: 100%;
+  background-color: $icon-color;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.exampel__slider-button {
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-image: url("../../images/icons/slider-button.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

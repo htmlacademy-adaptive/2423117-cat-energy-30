@@ -1,5 +1,14 @@
 .form {
   overflow: hidden;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
+  }
 }
 
 .form__name {
@@ -78,6 +87,12 @@
 .form-filter__list {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
 }
 
 .form-filter__list-name {
@@ -85,6 +100,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
   }
 }
 
@@ -98,6 +114,12 @@
   @media (min-width: $tablet-width) {
     &:not(:first-child) {
       margin-top: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:not(:first-child) {
+      margin: 0;
     }
   }
 }
@@ -115,10 +137,15 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    margin-top: 65px;
 
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 74px;
   }
 }
 
@@ -146,13 +173,16 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $dark-grey-text-color;
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
   margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     margin: 0;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -165,11 +195,26 @@
   padding: 14px 15px;
   border: 1px solid $border-color;
   margin-left: 13px;
+  flex-grow: 1;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     padding: 11px 20px;
+    flex-grow: 1;
   }
+}
+
+// как мне правильно вставить иконки?
+.form-filter__control-input-name--email {
+  mask-image: url("../../images/icons/form-email.svg");
+  mask-repeat: no-repeat;
+  background-color: $base-text-color;
+  display: block;
+  mask-size: 18px 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(50%);
+  right: 12px;
 }
 
 .form-filter__control-input-radio {
@@ -322,6 +367,14 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      left: calc(100% + 40px);
+    }
   }
 }
 

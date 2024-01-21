@@ -75,13 +75,17 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--active" href="#">главная</a>
+                <a class="main-nav__link main-nav__link--index main-nav__link--active" href="#"
+                  >главная</a
+                >
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="catalog.html">каталог продукции</a>
+                <a class="main-nav__link main-nav__link--index" href="catalog.html"
+                  >каталог продукции</a
+                >
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">подбор программы</a>
+                <a class="main-nav__link main-nav__link--index" href="form.html">подбор программы</a>
               </li>
             </ul>
           </div>
@@ -97,9 +101,6 @@
             Функциональное питание для котов
           </h1>
           <p class="main-container__subtitle">Занялся собой? Займись котом!</p>
-          <a class="main-container__button button" href="form.html"
-            >подобрать программу</a
-          >
         </div>
         <picture>
           <source
@@ -128,9 +129,13 @@
             height="270"
             alt="Фотография питания для котов"
         /></picture>
+        <div class="container">
+        <a class="main-container__button button" href="form.html"
+            >подобрать программу</a
+          ></div>
       </section>
-      <section class="catalog">
-        <div class="catalog__container container">
+      <div class="container">
+        <section class="catalog">
           <h2 class="visualy-hidden">Каталог продукции</h2>
           <div class="catalog__wrapper catalog__wrapper--cat-slim">
             <h3 class="catalog__title">похудение</h3>
@@ -149,8 +154,8 @@
             </p>
             <a class="catalog__link" href="#">каталог pro</a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="adventages">
         <div class="adventages__wrapper">
           <div class="adventages__container container">
@@ -194,21 +199,23 @@
               При этом он не менял своих привычек и по-прежнему спит по 16 часов
               в день.
             </p>
-            <dl class="exampel__list">
-              <div class="exampel__item">
-                <dt class="exampel__number">5 КГ</dt>
-                <dd class="exampel__description">снижение веса</dd>
-              </div>
-              <div class="exampel__item">
-                <dt class="exampel__number">60 ДНЕЙ</dt>
-                <dd class="exampel__description">затрачено времени</dd>
-              </div>
-            </dl>
-            <p class="exampel__subtitle-price">
-              Затраты на питание: 15 000 РУБ.
-            </p>
+            <div class="exampel__result">
+              <dl class="exampel__list">
+                <div class="exampel__item">
+                  <dt class="exampel__number">5 КГ</dt>
+                  <dd class="exampel__description">снижение веса</dd>
+                </div>
+                <div class="exampel__item">
+                  <dt class="exampel__number">60 ДНЕЙ</dt>
+                  <dd class="exampel__description">затрачено времени</dd>
+                </div>
+              </dl>
+              <p class="exampel__subtitle-price">
+                Затраты на питание: <span>15 000 РУБ.</span>
+              </p>
+            </div>
             <div class="exampel__image">
-              <div class="exampel__image--cat-before">
+              <div class="exampel__image-cat exampel__image-cat--before">
                 <picture>
                   <source
                     width="560"
@@ -227,7 +234,7 @@
                     alt="Картинка толстого кота"
                 /></picture>
               </div>
-              <div class="exampel__image--cat-after">
+              <div class="exampel__image-cat exampel__image-cat--after">
                 <picture>
                   <source
                     width="560"
@@ -246,6 +253,13 @@
                     alt="Картинка худого кота"
                 /></picture>
               </div>
+              <div class="exampel__slider">
+                <button
+                  class="exampel__slider-button"
+                  type="button"
+                  aria-label="Кнопка переключения между котами"
+                ></button>
+              </div>
             </div>
           </div>
         </div>
@@ -255,8 +269,8 @@
     <!-- разметка футера -->
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="container">
-          <div class="main-footer__contacts contacts">
+        <div class="main-footer__container-top container">
+          <div class="main-footer__contacts contacts contacts__color">
             <b class="contacts__title">приглашаем к сотрудничеству дилеров!</b>
             <p class="contacts__address">
               ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>

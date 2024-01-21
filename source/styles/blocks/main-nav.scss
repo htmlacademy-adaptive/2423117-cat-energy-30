@@ -90,7 +90,16 @@
   right: 0;
   left: 70px;
   z-index: 10;
-  min-height: 80vh;
+}
+
+.main-nav__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__link--active {
@@ -103,5 +112,11 @@
     height: 2px;
     background-color: $bg-basic_green;
   }
+  // полоска под навигацией
+  // @media (min-width: $desktop-width) {
+  //   &::after {
+  //     background-color: $white-color;
+  //   }
+  // }
 }
 
