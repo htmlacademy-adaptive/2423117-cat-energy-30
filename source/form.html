@@ -159,7 +159,7 @@
                       type="radio"
                       value="Похудение"
                       checked
-                    /><span class="form-filter__control-mark--radio"></span>
+                    /><span class="form-filter__control-mark form-filter__control-mark--radio"></span>
                   </label>
                 </li>
                 <li class="form-filter__item">
@@ -173,7 +173,7 @@
                       type="radio"
                       value="Набор массы"
                     />
-                    <span class="form-filter__control-mark--radio"></span>
+                    <span class="form-filter__control-mark form-filter__control-mark--radio"></span>
                   </label>
                 </li>
                 <li class="form-filter__item">
@@ -188,7 +188,7 @@
                       name="weight-group"
                       type="radio"
                       value="Не знаю"
-                    /><span class="form-filter__control-mark--radio"></span>
+                    /><span class="form-filter__control-mark form-filter__control-mark--radio"></span>
                   </label>
                 </li>
               </ul>
@@ -203,10 +203,10 @@
               <ul class="form-filter__list form-filter__list-contacts">
                 <li class="form-filter__item">
                   <label
-                    class="form-filter__control form-filter__control--contacts"
+                    class="form-filter__control form-filter__control--email"
                     >E-mail:*
                     <input
-                      class="form-filter__control-input-name form-filter__control-input-name--email"
+                      class="form-filter__control-input-name"
                       type="email"
                       name="email"
                       placeholder="kuklachev@gmail.com"
@@ -237,9 +237,9 @@
                 name="story"
                 rows="5"
                 cols="20"
+                placeholder="Расскажите обо всех повадках кота"
                 autocomplete="off"
-              >
-Расскажите обо всех повадках кота</textarea
+              ></textarea
               >
             </fieldset>
             <fieldset
@@ -250,7 +250,7 @@
               </legend>
               <ul class="form-filter__list form-filter__list--more">
                 <li class="form-filter__item">
-                  <label class="form-filter__control"
+                  <label class="form-filter__control form-filter__control--more"
                     ><span class="form-filter__control-more"
                       >сахарозаменитель</span
                     >
@@ -260,11 +260,11 @@
                       name="sweetener"
                       checked
                     />
-                    <span class="form-filter__control-mark--checkbox"></span>
+                    <span class="form-filter__control-mark form-filter__control-mark--checkbox"></span>
                   </label>
                 </li>
                 <li class="form-filter__item">
-                  <label class="form-filter__control"
+                  <label class="form-filter__control form-filter__control--more"
                     ><span class="form-filter__control-more"
                       >питьевая вода</span
                     >
@@ -273,29 +273,29 @@
                       type="checkbox"
                       name="water"
                     />
-                    <span class="form-filter__control-mark--checkbox"></span>
+                    <span class="form-filter__control-mark form-filter__control-mark--checkbox"></span>
                   </label>
                 </li>
                 <li class="form-filter__item">
-                  <label class="form-filter__control"
+                  <label class="form-filter__control form-filter__control--more"
                     ><span class="form-filter__control-more">молоко</span>
                     <input
                       class="form-filter__control-input-checkbox"
                       type="checkbox"
                       name="milk"
                     />
-                    <span class="form-filter__control-mark--checkbox"></span>
+                    <span class="form-filter__control-mark form-filter__control-mark--checkbox"></span>
                   </label>
                 </li>
                 <li class="form-filter__item">
-                  <label class="form-filter__control"
+                  <label class="form-filter__control form-filter__control--more"
                     ><span class="form-filter__control-more">витамины</span>
                     <input
                       class="form-filter__control-input-checkbox"
                       type="checkbox"
                       name="vitamins"
                     />
-                    <span class="form-filter__control-mark--checkbox"></span>
+                    <span class="form-filter__control-mark form-filter__control-mark--checkbox"></span>
                   </label>
                 </li>
               </ul>
@@ -317,7 +317,7 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__container-top container">
+        <div class="main-footer__container-top--grey container">
           <div class="main-footer__contacts contacts">
             <b class="contacts__title">приглашаем к сотрудничеству дилеров!</b>
             <p class="contacts__address">
@@ -362,13 +362,6 @@
             <div class="main-footer__copyright copyright">
               <a class="copyright__link" href="#">
                 <b class="copyright__text">HTML Academy</b>
-                <img
-                  class="copyright__link-image"
-                  src="images/logo-html-academy.svg"
-                  width="27"
-                  height="34"
-                  alt="Картинка логотипа HTML  Academy"
-                />
               </a>
             </div>
           </div>

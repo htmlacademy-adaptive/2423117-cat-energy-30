@@ -1,5 +1,6 @@
 .more-products {
   margin-top: 25px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-top: 70px;
@@ -77,6 +78,7 @@
   padding: 0;
   position: relative;
   padding-bottom: 36px;
+  display: inline;
 
   &::before {
     content: "";

@@ -13,10 +13,26 @@
 .copyright__text {
   font-size: 16px;
   color: $dark-grey-text-color;
-}
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-.copyright__link-image {
-  &:hover {
-    fill: $bg-basic_green;
+  &::after {
+    content: "";
+    display: block;
+    mask-image: url("../../images/icons/stack.svg#logo-html-academy");
+    mask-repeat: no-repeat;
+    background-color: $dark-grey-text-color;
+    width: 27px;
+    height: 34px;
+  }
+
+  &:hover::after {
+    background-color: $bg-basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

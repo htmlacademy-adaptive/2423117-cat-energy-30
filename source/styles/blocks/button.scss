@@ -15,9 +15,9 @@
   &:hover {
     background-color: $bg-green-hover;
   }
-  //  как сделать только чтобы менялся цвет текста?
+
   &:active {
-    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -25,6 +25,7 @@
   background-color: $bg-grey-color;
   color: $dark-grey-text-color;
   margin-top: 21px;
+
 
   &:hover {
     background-color: $bg-grey-hover;

@@ -3,10 +3,12 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 45px;
+    border-bottom: 1px solid $line-color;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 71px;
+    border: none;
   }
 }
 
@@ -21,33 +23,15 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 154px;
+    gap: 134px 154px;
     margin-top: 72px;
     counter-reset: number 0;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 230px);
     gap: 80px;
-  }
-}
-
-.adventages__list li {
-  @media (min-width: $tablet-width) {
-    position: relative;
-    counter-increment: number;
-
-    &::before {
-      content: counter(number);
-      display: block;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-grey-color;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-    }
   }
 }
 
@@ -92,8 +76,24 @@
     margin: 0;
     margin-top: 31px;
     width: 245px;
+    position: relative;
+    counter-increment: number;
+
+    &::after {
+      content: counter(number);
+      display: block;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-grey-color;
+      position: absolute;
+      top: -130px;
+      right: 0;
+      z-index: -1;
+    }
   }
 }
+
 
 .adventages__item--healthy::before {
   content: "";
