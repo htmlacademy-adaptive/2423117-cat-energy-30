@@ -75,7 +75,9 @@
   @media (min-width: $tablet-width) {
     display: flex;
     gap: 33px;
+    flex-wrap: wrap;
     background-color: transparent;
+    max-width: 500px;
 
     &::before {
       display: none;

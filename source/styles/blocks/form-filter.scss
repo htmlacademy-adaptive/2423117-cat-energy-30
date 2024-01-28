@@ -171,6 +171,18 @@
   margin-left: 13px;
   flex-grow: 1;
 
+  &:invalid:required {
+    border-color: #ff8282;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: $dark-grey-text-color;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     padding: 11px 20px;
