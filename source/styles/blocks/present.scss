@@ -1,16 +1,31 @@
 .present {
   background-color: $bg-basic_green;
-  background-image: url("../../images/icons/catalog-present.svg#catalog-present");
+  background-image: url("../../images/icons/catalog-present.svg#catalog-present"), url("../../images/cat-present-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 78px 80px;
-  width: 280px;
+  background-size: 78px 80px, cover;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../images/icons/catalog-present.svg#catalog-present"), url("../../images/cat-present-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 78px 80px, cover;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../images/icons/catalog-present.svg#catalog-present"), url("../../images/cat-present-desctop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 78px 80px, cover;
+    width: 245px;
+    height: 288px;
+  }
 }
 
 .present__subtitle {
-  font-family: $primary-font;
   font-size: 16px;
-  line-height: 20px;
-  color: $white-text-color;
+  color: $white-color;
   padding: 186px 61px 43px 58px;
 }
