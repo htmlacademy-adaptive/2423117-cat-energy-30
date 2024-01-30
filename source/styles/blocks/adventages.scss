@@ -68,10 +68,8 @@
   flex-shrink: 0;
 }
 
-.adventages__item--view::before {
-  content: "";
-  display: block;
-  background-image: url("../../images/icons/icon_water.svg#icon_water");
+.adventages__item--view {
+  background-image: url("../../images/icons/stack.svg#icon_water");
   background-color: $bg-basic_green;
   background-repeat: no-repeat;
   background-position: center;
@@ -81,10 +79,8 @@
   flex-shrink: 0;
 }
 
-.adventages__item--replace::before {
-  content: "";
-  display: block;
-  background-image: url("../../images/icons/icon_eat.svg#icon_eat");
+.adventages__item--replace {
+  background-image: url("../../images/icons/stack.svg#icon_eat");
   background-color: $bg-basic_green;
   background-repeat: no-repeat;
   background-position: center;
@@ -94,10 +90,8 @@
   flex-shrink: 0;
 }
 
-.adventages__item--changes::before {
-  content: "";
-  display: block;
-  background-image: url("../../images/icons/icon_watch.svg#icon_watch");
+.adventages__item--changes {
+  background-image: url("../../images/icons/stack.svg#icon_watch");
   background-color: $bg-basic_green;
   background-repeat: no-repeat;
   background-position: center;
