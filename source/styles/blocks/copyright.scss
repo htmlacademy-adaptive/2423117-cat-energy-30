@@ -36,3 +36,9 @@
     opacity: 0.3;
   }
 }
+
+.copyright__link-image {
+  &:hover {
+    fill: $bg-basic_green;
+  }
+}

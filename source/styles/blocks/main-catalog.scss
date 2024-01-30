@@ -191,3 +191,11 @@
     margin-top: 37px;
   }
 }
+
+.main-catalog__grid {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 80px;
+  }
+}
