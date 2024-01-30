@@ -35,15 +35,15 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: block;
   }
 }
 
 .main-nav__list a {
   position: relative;
   display: block;
-  padding: 22px 0;
-  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
   margin: 0;
   color: $black-text-color;
 }
@@ -78,10 +78,16 @@
     flex-wrap: wrap;
     background-color: transparent;
     max-width: 500px;
+    margin-right: 5px;
 
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 34px;
+    margin: 0;
   }
 }
 
@@ -103,13 +109,16 @@
   }
 
   @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+
     &::after {
       display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
   }
 }

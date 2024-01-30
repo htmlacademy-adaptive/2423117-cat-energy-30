@@ -10,10 +10,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 60px 80px;
+    padding: 60px 79px;
     background-color: $white-color;
     position: absolute;
     top: 95px;
+    width: 565px;
   }
 }
 
@@ -42,7 +43,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 26px;
+    line-height: 27px;
     width: 163px;
   }
 }
@@ -51,7 +52,7 @@
   font-size: 14px;
   color: $dark-grey-text-color;
   margin: 0;
-  width: 160px;
+  width: 165px;
 
   @media (min-width: $tablet-width) {
     width: 157px;
@@ -70,6 +71,6 @@
 .contacts__address span {
   @media (min-width: $tablet-width) {
     display: block;
-    margin-top: 19px;
+    margin-top: 20px;
   }
 }
