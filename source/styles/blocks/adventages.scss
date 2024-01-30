@@ -1,3 +1,17 @@
+.adventages__wrapper {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    border-bottom: 1px solid $line-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 71px;
+    border: none;
+  }
+}
+
 .adventages__list {
   display: flex;
   flex-direction: column;
@@ -9,7 +23,10 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px 154px;
+    gap: 134px 154px;
+    margin-top: 72px;
+    counter-reset: number 0;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -25,6 +42,11 @@
   &:last-child {
     margin-bottom: 49px;
   }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .adventages__title {
@@ -33,16 +55,15 @@
   line-height: 40px;
   color: $black-text-color;
   margin: 0;
-  margin-top: $margin-top-mobile;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 45px;
   }
 }
 
 .adventages__subtitle {
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 18px;
   color: $dark-grey-text-color;
@@ -52,6 +73,24 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin: 0;
+    margin-top: 31px;
+    width: 245px;
+    position: relative;
+    counter-increment: number;
+
+    &::after {
+      content: counter(number);
+      display: block;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-grey-color;
+      position: absolute;
+      top: -130px;
+      right: 0;
+      z-index: -1;
+    }
   }
 }
 

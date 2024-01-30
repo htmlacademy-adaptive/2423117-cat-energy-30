@@ -1,9 +1,42 @@
 .main-nav {
-  position: relative;
+  &--nojs {
+    .main-nav__wrapper {
+      display: block;
+      position: absolute;
+      top: 69px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      // по вложенности не могу сделать, а отдельно тоже не могу прописать чтобы в десктопе навигация встала как надо...
+      @media (min-width: $tablet-width) {
+        position: static;
+      }
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+
+  &--opened {
+    .main-nav__wrapper {
+      display: block;
+      position: absolute;
+      top: 69px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      background-color: $white-color;
+    }
+  }
 }
 
 .main-nav__wrapper {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .main-nav__list a {
@@ -13,7 +46,43 @@
   text-align: center;
   margin: 0;
   color: $black-text-color;
+}
+
+.main-nav__list .main-nav__link-index {
+  @media (min-width: $desktop-width) {
+    color: $white-color;
+
+    &::after {
+      background-color: $white-color;
+    }
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
   background-color: $white-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $line-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 33px;
+    flex-wrap: wrap;
+    background-color: transparent;
+    max-width: 500px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .main-nav__item {
@@ -23,6 +92,26 @@
   text-transform: uppercase;
   color: $black-text-color;
   list-style: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $line-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .main-nav__toggle {
@@ -35,6 +124,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -52,43 +145,32 @@
   right: 21px;
   background-image: url("../../images/icons/close-button-mobile.svg");
   background-repeat: no-repeat;
-  background-size: 18px 18px;
   display: block;
   border: none;
   width: 18px;
   height: 18px;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.main-nav--opened .main-nav__wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 70px;
-  z-index: 10;
-  min-height: 80vh;
+.main-nav__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-  }
+.main-nav__link--active {
+  display: none;
 
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 450px;
-  }
-
-  .main-nav__item {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .main-nav__item--active a {
+  @media (min-width: $tablet-width) {
     &::after {
       content: "";
       position: absolute;
@@ -98,17 +180,5 @@
       height: 2px;
       background-color: $bg-basic_green;
     }
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
   }
 }

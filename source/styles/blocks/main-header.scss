@@ -1,11 +1,27 @@
 .main-header {
   padding-top: 13px;
+  padding-bottom: 15px;
+  position: relative;
+  border-bottom: 1px solid $line-color;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-top: 25px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+  }
 }
 
 .main-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .main-header__logo {
@@ -25,17 +41,8 @@
 .main-header__logo-text {
   display: block;
   margin-left: 56px;
-}
 
-@media (min-width: $tablet-width) {
-  .main-header {
-    display: flex;
-    align-items: center;
-    height: 140px;
-    padding: 0;
-  }
-
-  .main-header__logo-text {
+  @media (min-width: $tablet-width) {
     margin-left: 13px;
   }
 }

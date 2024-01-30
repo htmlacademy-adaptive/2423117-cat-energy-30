@@ -1,54 +1,49 @@
-.form-filter__control-input-name {
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $dark-grey-text-color;
-}
+.main-form__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
 
-.form-filter__list {
   @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    padding: 0 110px;
   }
 }
 
-.form-filter__item {
-  list-style-type: none;
+.form {
+  overflow: hidden;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
+  }
 }
 
-.form__title {
-  font-family: $secondary-font;
-  font-size: 36px;
-  line-height: 36px;
-  color: $black-text-color;
+.form__name {
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-top: 66px;
+  }
 }
 
-.form-filter__filter-title {
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $black-text-color;
-}
+.form__button {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 284px 1fr;
+    align-items: center;
+    margin-top: 57px;
+  }
 
-.form-filter__control {
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $dark-grey-text-color;
-}
-
-.form-filter__filter-subtitle {
-  font-family: $secondary-font;
-  font-size: 24px;
-  line-height: 26px;
-  color: $black-text-color;
-}
-
-.form-filter__form-required {
-  font-size: 14px;
-  line-height: 16px;
-  color: $black-text-color;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 570px 1fr;
+    margin-top: 65px;
+  }
 }

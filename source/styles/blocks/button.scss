@@ -17,15 +17,20 @@
   }
 
   &:active {
-    color: fade($white-color, 30%);
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
 .button--secondary {
   background-color: $bg-grey-color;
   color: $dark-grey-text-color;
+  margin-top: 21px;
 
   &:hover {
     background-color: $bg-grey-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 87px;
   }
 }
