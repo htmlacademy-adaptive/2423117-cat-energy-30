@@ -35,6 +35,11 @@
   position: relative;
   text-align: center;
   padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 300px;
 
   &::after {
     content: "";
@@ -60,10 +65,10 @@
   mask-image: url("../../images/logo-text.svg");
   mask-repeat: no-repeat;
   mask-size: contain;
-  display: block;
   background-color: #111111;
   width: 128px;
   height: 24px;
+  display: block;
 
   &:hover,
   &:focus {

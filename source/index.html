@@ -68,7 +68,7 @@
             </div>
           </a>
         </div>
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav">
           <button class="main-nav__toggle" type="button">
             <span class="visualy-hidden">Открыть меню</span>
           </button>
@@ -109,6 +109,8 @@
           <p class="main-container__subtitle">Занялся собой? Займись котом!</p>
           <picture>
             <source
+              width="552"
+              height="499"
               type="image/webp"
               media="(min-width: 1440px)"
               srcset="
@@ -116,6 +118,8 @@
                 images/index-cup-desktop@2x.webp 2x
               " />
             <source
+              width="709"
+              height="609"
               type="image/webp"
               media="(min-width: 768px)"
               srcset="
@@ -123,6 +127,8 @@
                 images/index-cup-tablet@2x.webp 2x
               " />
             <source
+              width="280"
+              height="270"
               type="image/webp"
               srcset="
                 images/index-cup-mobile@1x.webp 1x,
@@ -245,13 +251,17 @@
               <div class="exampel__image-cat exampel__image-cat--before">
                 <picture>
                   <source
+                    width="560"
+                    height="512"
                     type="image/webp"
                     media="(min-width: 768px)"
                     srcset="
-                      images/icat-before-tablet@1x.webp 1x,
-                      images/cat-before-tablet@2x.webp 2x
+                      images/cat-before-tablet@1x.webp 1x,
+                      images/cat-before-tablet@2x.webp  2x
                     " />
                   <source
+                    width="280"
+                    height="256"
                     type="image/webp"
                     srcset="
                       images/cat-before-mobile@1x.webp 1x,
@@ -277,13 +287,17 @@
               <div class="exampel__image-cat exampel__image-cat--after">
                 <picture>
                   <source
+                    width="560"
+                    height="512"
                     type="image/webp"
                     media="(min-width: 768px)"
                     srcset="
-                      images/icat-after-tablet@1x.webp 1x,
-                      images/cat-after-tablet@2x.webp 2x
+                      images/cat-after-tablet@1x.webp 1x,
+                      images/cat-after-tablet@2x.webp  2x
                     " />
                   <source
+                    width="280"
+                    height="256"
                     type="image/webp"
                     srcset="
                       images/cat-after-mobile@1x.webp 1x,
@@ -322,8 +336,9 @@
     <!-- разметка футера -->
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__container-top container">
-          <div class="main-footer__contacts contacts contacts__color">
+        <div class="main-footer__container-top">
+          <div class="container">
+          <div class="main-footer__contacts contacts contacts--color">
             <b class="contacts__title"
               >приглашаем<br />
               к сотрудничеству дилеров!</b
@@ -341,19 +356,27 @@
         <div class="container">
           <div class="main-footer__container">
             <div class="main-footer__logo">
-              <a class="main-footer__logo-text" href="#"> </a>
+              <a class="main-footer__logo-text" href="#">
+                <span class="visualy-hidden">Логотип сайта</span>
+              </a>
             </div>
             <div class="main-footer__social social">
               <b class="visualy-hidden">Давайте дружить</b>
               <ul class="social__list">
                 <li class="social__item">
-                  <a class="social__link social__link--vk" href="#"> </a>
+                  <a class="social__link social__link--vk" href="#">
+                    <span class="visualy-hidden">Вконтакте</span>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link social__link--youtube" href="#"> </a>
+                  <a class="social__link social__link--youtube" href="#">
+                    <span class="visualy-hidden">Ютуб</span>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link social__link--telegram" href="#"> </a>
+                  <a class="social__link social__link--telegram" href="#">
+                    <span class="visualy-hidden">Телеграмм</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -364,8 +387,8 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
     </footer>
-    <script src="scripts/index.js"></script>
   </body>
 </html>

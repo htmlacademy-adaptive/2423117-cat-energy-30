@@ -283,14 +283,6 @@
   border: 2px solid $icon-color;
   cursor: pointer;
 
-  &:hover {
-    border: 2px solid $bg-basic_green;
-  }
-
-  &:active {
-    border: 2px solid #5eaa2f;
-  }
-
   &::after {
     content: "";
     display: block;
@@ -303,14 +295,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $icon-color;
-
-    &:hover {
-      background-color: $bg-basic_green;
-    }
-
-    &:active {
-      background-color: #5eaa2f;
-    }
   }
 }
-

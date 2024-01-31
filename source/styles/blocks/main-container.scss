@@ -1,3 +1,11 @@
+.main-container {
+  margin-top: 194px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
 .main-container__main {
   position: relative;
   text-align: center;
@@ -125,6 +133,7 @@
     text-align: start;
     margin-left: 90px;
     margin-top: 40px;
+    max-width: 300px;
   }
 
   @media (min-width: $desktop-width) {
@@ -144,6 +153,8 @@
     max-width: 244px;
     margin: 0;
     padding: 17px 26px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -151,4 +162,3 @@
     top: 52px;
   }
 }
-

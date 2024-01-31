@@ -46,20 +46,6 @@
   @media (min-width: $tablet-width) {
     flex-direction: column;
     margin: 0;
-    counter-increment: number;
-
-    &::after {
-      content: counter(number);
-      display: block;
-      font-family: $secondary-font;
-      font-size: 280px;
-      line-height: 280px;
-      color: $bg-grey-color;
-      position: absolute;
-      bottom: -60px;
-      right: 0;
-      z-index: -1;
-    }
   }
 }
 
@@ -91,6 +77,20 @@
     margin-top: 31px;
     width: 245px;
     position: relative;
+    counter-increment: number;
+
+    &::after {
+      content: counter(number);
+      display: block;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $bg-grey-color;
+      position: absolute;
+      bottom: -60px;
+      right: 0;
+      z-index: -1;
+    }
   }
 }
 
