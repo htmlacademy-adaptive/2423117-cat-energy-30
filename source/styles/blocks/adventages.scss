@@ -1,5 +1,5 @@
 .adventages__wrapper {
-  margin-top: 20px;
+  margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     margin-top: 45px;
@@ -23,15 +23,15 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 134px 154px;
+    gap: 135px 58px;
     margin-top: 72px;
     counter-reset: number 0;
-    margin-bottom: 47px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 230px);
-    gap: 80px;
+    gap: 95px;
   }
 }
 
@@ -65,7 +65,7 @@
 .adventages__subtitle {
   font-family: $primary-font;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 19px;
   color: $dark-grey-text-color;
   margin: 0;
   margin-left: 20px;
@@ -87,7 +87,7 @@
       line-height: 280px;
       color: $bg-grey-color;
       position: absolute;
-      top: -130px;
+      bottom: -60px;
       right: 0;
       z-index: -1;
     }
@@ -105,6 +105,11 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .adventages__item--view::before {
@@ -118,6 +123,11 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .adventages__item--replace::before {
@@ -131,6 +141,11 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .adventages__item--changes::before {
@@ -144,4 +159,9 @@
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
 }

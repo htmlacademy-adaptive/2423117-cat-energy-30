@@ -17,18 +17,22 @@
 .catalog__wrapper {
   position: relative;
   background-color: $bg-grey-color;
-  padding: 24px 33px 18px 20px;
+  padding: 31px 19px 18px 20px;
 
   &:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 21px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 63px 57px 52px;
+    padding: 77px 283px 63px 52px;
+
+    &:not(:first-child) {
+      margin: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 77px 61px 59px 52px;
+    padding: 77px 61px 65px 52px;
   }
 }
 
@@ -38,15 +42,14 @@
   display: block;
   top: 21px;
   left: 27px;
-  background-image: url("../../images/icons/cat-slim.svg#cat-slim");
+  background-image: url("../../images/icons/stack.svg#cat-slim");
   background-repeat: no-repeat;
   background-size: 36px;
   width: 36px;
   height: 50px;
 
   @media (min-width: $tablet-width) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 81px;
     left: auto;
     right: 93px;
     width: 140px;
@@ -56,8 +59,8 @@
 
   @media (min-width: $desktop-width) {
     width: 70px;
-    height: 93px;
-    top: 81px;
+    height: 97px;
+    top: 40px;
     left: 67px;
   }
 }
@@ -70,12 +73,11 @@
   background-color: $bg-basic_green;
   border-radius: 50%;
   position: absolute;
-  top: 24px;
+  top: 25px;
   left: 20px;
 
   @media (min-width: $tablet-width) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 92px;
     left: auto;
     right: 63px;
     width: 200px;
@@ -85,7 +87,7 @@
   @media (min-width: $desktop-width) {
     width: 100px;
     height: 100px;
-    top: 87px;
+    top: 46px;
     left: 52px;
   }
 }
@@ -95,7 +97,7 @@
   position: absolute;
   top: 35px;
   left: 13px;
-  background-image: url("../../images/icons/cat-pro.svg#cat-pro");
+  background-image: url("../../images/icons/stack.svg#cat-pro");
   background-repeat: no-repeat;
   background-size: 67px;
   display: block;
@@ -103,20 +105,19 @@
   height: 28px;
 
   @media (min-width: $tablet-width) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 135px;
     left: auto;
-    right: 29px;
+    right: 25px;
     width: 268px;
     height: 112px;
     background-size: contain;
   }
 
   @media (min-width: $desktop-width) {
-    top: 90px;
+    top: 66px;
     left: 33px;
     width: 134px;
-    height: 56px;
+    height: 57px;
   }
 }
 
@@ -127,7 +128,7 @@
   color: $black-text-color;
   text-transform: uppercase;
   margin: 0;
-  margin-left: 90px;
+  margin-left: 70px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -136,7 +137,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 214px;
+    margin-left: 163px;
   }
 }
 
@@ -165,8 +166,9 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin: 0;
     margin-top: 24px;
-    padding-right: 314px;
+    padding-right: 257px;
 
     &::after {
       display: none;
@@ -176,6 +178,7 @@
   @media (min-width: $desktop-width) {
     padding: 0;
     margin-top: 73px;
+    width: 100%;
   }
 }
 
@@ -191,13 +194,17 @@
 
   &::after {
     content: "";
-    display: inline-block;
-    background-image: url("../../images/icons/arrow.svg#arrow");
+    display: block;
+    background-image: url("../../images/icons/stack.svg#arrow");
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center left;
+    width: 24px;
+    height: 13px;
+    margin-left: 15px;
+  }
+
+  &:hover::after {
     width: 32px;
-    height: 10px;
-    padding-left: 15px;
   }
 
   &:active {
@@ -206,10 +213,14 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    margin-top: 52px;
+    margin-top: 36px;
+
+    &::after {
+      margin-left: 26px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 27px;
+    margin-top: 34px;
   }
 }

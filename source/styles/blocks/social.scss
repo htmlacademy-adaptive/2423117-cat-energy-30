@@ -17,6 +17,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-left: 34px;
 
     &::after {
       display: none;
@@ -27,7 +28,8 @@
 .social__list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
   width: 132px;
   margin: 0;
   padding: 0;

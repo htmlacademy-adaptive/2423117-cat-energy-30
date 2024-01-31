@@ -1,42 +1,25 @@
 .main-nav {
-  &--nojs {
-    .main-nav__wrapper {
-      display: block;
-      position: absolute;
-      top: 69px;
-      left: 0;
-      z-index: 10;
-      width: 100%;
-      // по вложенности не могу сделать, а отдельно тоже не могу прописать чтобы в десктопе навигация встала как надо...
-      @media (min-width: $tablet-width) {
-        position: static;
-      }
-    }
-
-    .main-nav__toggle {
-      display: none;
-    }
-  }
-
-  &--opened {
-    .main-nav__wrapper {
-      display: block;
-      position: absolute;
-      top: 69px;
-      left: 0;
-      z-index: 10;
-      width: 100%;
-      background-color: $white-color;
-    }
-  }
+  display: block;
 }
 
 .main-nav__wrapper {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: block;
+    width: auto;
+    position: relative;
+    top: 0;
   }
+}
+
+.main-nav__toggle {
+  display: none;
 }
 
 .main-nav__list a {
@@ -46,6 +29,10 @@
   text-align: center;
   margin: 0;
   color: $black-text-color;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 11px;
+  }
 }
 
 .main-nav__list .main-nav__link-index {
@@ -74,7 +61,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    gap: 33px;
+    gap: 34px;
     flex-wrap: wrap;
     background-color: transparent;
     max-width: 500px;
@@ -82,6 +69,11 @@
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 34px;
+    margin: 0;
   }
 }
 
@@ -103,30 +95,17 @@
   }
 
   @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+
     &::after {
       display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
-  }
-}
-
-.main-nav__toggle {
-  display: block;
-  background-image: url("../../images/icons/open-button-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: 24px 16px;
-  width: 24px;
-  height: 16px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -136,25 +115,6 @@
   transform: translateY(-50%);
   right: 21px;
   z-index: 2;
-}
-
-.main-nav--opened .main-nav__toggle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 21px;
-  background-image: url("../../images/icons/close-button-mobile.svg");
-  background-repeat: no-repeat;
-  display: block;
-  border: none;
-  width: 18px;
-  height: 18px;
-  background-color: transparent;
-  cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
 }
 
 .main-nav__link {
